@@ -1,0 +1,140 @@
+/* global variables */
+:root {
+  --inky: #1d1d1f;
+  --ash: #6e6e73;
+  --mist: #d2d2d7a3;
+}
+
+/* reset styles */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--inky);
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+/* text elements */
+h1 {
+  font-size: 48px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.16;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+strong {
+  color: var(--inky);
+  font-weight: 600;
+}
+
+a.plain {
+  text-decoration: none;
+}
+
+a.plain:hover {
+  text-decoration: none;
+}
+
+/* text color presets */
+.text-inky {
+  color: var(--inky);
+}
+
+.text-ash {
+  color: var(--ash);
+}
+
+/* header */
+header {
+  margin: 0 52px;
+}
+
+/* SECTIONS ————————————————————— */
+section {
+  margin: 52px;
+}
+
+/* card-slider section */
+.card-slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-slider .slider-list {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  margin: 0;
+  gap: 24px;
+}
+
+.card-slider .slider-card {
+  display: flex;
+  flex-direction: column; 
+  text-decoration: none;
+  max-width: 440px;
+}
+
+.slider-card .img-wrapper {
+  
+}
+
+.slider-card .card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-slider .slider-controls-wrapper {
+  margin: 24px;
+}
+
+.card-slider .slider-controls-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.card-slider .slider-control {
+  list-style: none;
+  fill: var(--inky);
+}
+
+.card-slider .slider-control button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 100%;
+  background-color: var(--mist);
+}
+
+.card-slider .slider-control .control-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.slider-control.disabled button {
+  opacity: 0.42;
+}

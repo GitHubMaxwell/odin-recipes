@@ -1,8 +1,18 @@
+/**
+ * TODO:
+ * add some sort of limit to the width of the containers (body, or header & section) to give breathing room let & right
+ * max-width to the main
+ */
+
 /* global variables */
 :root {
   --inky: #1d1d1f;
   --ash: #6e6e73;
   --mist: #d2d2d7a3;
+
+  --section-spacing: 19vh;
+  --copy-width: 825px;
+  --content-indent: 8%;
 }
 
 /* reset styles */
@@ -23,22 +33,34 @@ ul {
 
 /* text elements */
 h1 {
-  font-size: 48px;
-  line-height: 1.08;
+  font-size: 56px;
+  line-height: 1.12;
   font-weight: 600;
   letter-spacing: -0.003em;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.16;
   font-weight: 600;
   letter-spacing: 0.009em;
 }
 
+h1.content-header {
+  font-size: 20px;
+}
+
+h2.content-tag {
+  font-size: 16px;
+}
+
 p {
-  font-size: 19px;
-  line-height: 1.4;
+  font-size: 24px;
+  line-height: 1.56;
+}
+
+p.content-body {
+  font-size: 16px;
 }
 
 strong {
@@ -63,14 +85,26 @@ a.plain:hover {
   color: var(--ash);
 }
 
-/* header */
-header {
-  margin: 0 52px;
+/* main content */
+main {
+  width: 87.5%;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.copy-content {
+  max-width: var(--copy-width);
+  margin-left: var(--content-indent);
+}
+
+.content {
+  margin-left: var(--content-indent);
 }
 
 /* SECTIONS ————————————————————— */
+
 section {
-  margin: 52px;
+  margin: var(--section-spacing) 0;
 }
 
 /* card-slider section */
@@ -91,16 +125,24 @@ section {
   display: flex;
   flex-direction: column; 
   text-decoration: none;
-  max-width: 440px;
 }
 
 .slider-card .img-wrapper {
-  
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 .slider-card .card-img {
   width: 100%;
   height: auto;
+}
+
+.slider-card .content-wrapper {
+  margin: 24px 8px;
+  max-width: 77.5%;
 }
 
 .card-slider .slider-controls-wrapper {
